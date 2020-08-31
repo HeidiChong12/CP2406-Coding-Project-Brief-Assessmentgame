@@ -1,0 +1,12 @@
+*~
+*.class
+// for eclipse file
+*.metadata
+// eclipse settings file
+*.prefs
+.project
+/nbproject/
+/build/
+build.xml
+manifest.mf
+/dist/

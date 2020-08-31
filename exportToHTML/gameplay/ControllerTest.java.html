@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>ControllerTest.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #629755; font-style: italic;}
+.s4 { color: #629755; font-weight: bold; font-style: italic;}
+.s5 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ControllerTest.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * To change this license header, choose License Headers in Project Properties. 
+ * To change this template file, choose Tools | Templates 
+ * and open the template in the editor. 
+ */</span>
+<span class="s2">package </span><span class="s1">gameplay</span><span class="s2">;</span>
+
+<span class="s2">import </span><span class="s1">javafx.scene.input.KeyEvent</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.After</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.AfterClass</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.Before</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.BeforeClass</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.Test</span><span class="s2">;</span>
+<span class="s2">import static </span><span class="s1">org.junit.Assert.*</span><span class="s2">;</span>
+
+<span class="s3">/**</span>
+ <span class="s3">* Used for unit testing of the Controller class</span>
+ <span class="s3">*</span>
+ <span class="s3">* </span><span class="s4">@author </span><span class="s3">Gabriel</span>
+ <span class="s3">*/</span>
+<span class="s2">public class </span><span class="s1">ControllerTest {</span>
+
+    <span class="s2">public </span><span class="s1">ControllerTest() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@BeforeClass</span>
+    <span class="s2">public static void </span><span class="s1">setUpClass() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@AfterClass</span>
+    <span class="s2">public static void </span><span class="s1">tearDownClass() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Before</span>
+    <span class="s2">public void </span><span class="s1">setUp() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@After</span>
+    <span class="s2">public void </span><span class="s1">tearDown() {</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getInstance method, of class Controller.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetInstance() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;getInstance&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Controller expResult = </span><span class="s2">null;</span>
+        <span class="s1">Controller result = Controller.getInstance()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+        <span class="s0">// TODO review the generated test code and remove the default call to fail.</span>
+        <span class="s1">fail(</span><span class="s5">&quot;The test case is a prototype.&quot;</span><span class="s1">)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of clear method, of class Controller.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testClear() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;clear&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Controller instance = </span><span class="s2">null;</span>
+        <span class="s1">instance.clear()</span><span class="s2">;</span>
+        <span class="s0">// TODO review the generated test code and remove the default call to fail.</span>
+        <span class="s1">fail(</span><span class="s5">&quot;The test case is a prototype.&quot;</span><span class="s1">)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of addBinding method, of class Controller.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testAddBinding() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;addBinding&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Input input = </span><span class="s2">null;</span>
+        <span class="s1">Controller instance = </span><span class="s2">null;</span>
+        <span class="s1">instance.addBinding(input)</span><span class="s2">;</span>
+        <span class="s0">// TODO review the generated test code and remove the default call to fail.</span>
+        <span class="s1">fail(</span><span class="s5">&quot;The test case is a prototype.&quot;</span><span class="s1">)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of handle method, of class Controller.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testHandle() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;handle&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">KeyEvent e = </span><span class="s2">null;</span>
+        <span class="s1">Controller instance = </span><span class="s2">null;</span>
+        <span class="s1">instance.handle(e)</span><span class="s2">;</span>
+        <span class="s0">// TODO review the generated test code and remove the default call to fail.</span>
+        <span class="s1">fail(</span><span class="s5">&quot;The test case is a prototype.&quot;</span><span class="s1">)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

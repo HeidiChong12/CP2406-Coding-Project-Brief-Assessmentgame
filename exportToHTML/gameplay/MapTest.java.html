@@ -1,0 +1,208 @@
+<html>
+<head>
+<title>MapTest.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #629755; font-style: italic;}
+.s4 { color: #629755; font-weight: bold; font-style: italic;}
+.s5 { color: #6a8759;}
+.s6 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MapTest.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * To change this license header, choose License Headers in Project Properties. 
+ * To change this template file, choose Tools | Templates 
+ * and open the template in the editor. 
+ */</span>
+<span class="s2">package </span><span class="s1">gameplay</span><span class="s2">;</span>
+
+<span class="s2">import </span><span class="s1">database.User</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.After</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.AfterClass</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.Before</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.BeforeClass</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.Test</span><span class="s2">;</span>
+<span class="s2">import static </span><span class="s1">org.junit.Assert.*</span><span class="s2">;</span>
+
+<span class="s3">/**</span>
+ <span class="s3">* Contains unit tests for Map class</span>
+ <span class="s3">*</span>
+ <span class="s3">* </span><span class="s4">@author </span><span class="s3">Gabriel</span>
+ <span class="s3">*/</span>
+<span class="s2">public class </span><span class="s1">MapTest {</span>
+
+    <span class="s2">public </span><span class="s1">MapTest() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@BeforeClass</span>
+    <span class="s2">public static void </span><span class="s1">setUpClass() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@AfterClass</span>
+    <span class="s2">public static void </span><span class="s1">tearDownClass() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Before</span>
+    <span class="s2">public void </span><span class="s1">setUp() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@After</span>
+    <span class="s2">public void </span><span class="s1">tearDown() {</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of addWall method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testAddWall() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;addWall&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">xPos = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">yPos = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s1">String colour = </span><span class="s5">&quot;0x00F&quot;</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">10</span><span class="s2">, </span><span class="s6">10</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.addWall(xPos</span><span class="s2">, </span><span class="s1">yPos</span><span class="s2">, </span><span class="s1">colour)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getWidth method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetWidth() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;getWidth&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">0</span><span class="s2">, </span><span class="s6">0</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">expResult = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">result = instance.getWidth()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getHeight method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetHeight() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;getHeight&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">0</span><span class="s2">, </span><span class="s6">0</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">expResult = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">result = instance.getHeight()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of setSpeed method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testSetSpeed() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;setSpeed&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">hz = </span><span class="s6">10</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">0</span><span class="s2">, </span><span class="s6">0</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.setSpeed(hz)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of collides method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testCollides() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;collides&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">x = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">y = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">10</span><span class="s2">, </span><span class="s6">10</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">boolean </span><span class="s1">expResult = </span><span class="s2">false;</span>
+        <span class="s2">boolean </span><span class="s1">result = instance.collides(x</span><span class="s2">, </span><span class="s1">y)</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of run method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testRun() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;run&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">10</span><span class="s2">, </span><span class="s6">10</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.run()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getPlayerWins method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetPlayerWins() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;getPlayerWins&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">index = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s1">Player player = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s2">null, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">10</span><span class="s2">, </span><span class="s6">10</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.addPlayer(player</span><span class="s2">, </span><span class="s1">Player.Direction.LEFT</span><span class="s2">, </span><span class="s6">0</span><span class="s2">, </span><span class="s6">0</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">expResult = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">result = instance.getPlayerWins(index)</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getPlayer method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetPlayer() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;getPlayer&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">i = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">10</span><span class="s2">, </span><span class="s6">10</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">User testUser = </span><span class="s2">new </span><span class="s1">User(</span><span class="s6">1</span><span class="s2">, </span><span class="s5">&quot;Gabriel&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player expResult = </span><span class="s2">new </span><span class="s1">Player(testUser</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.addPlayer(expResult</span><span class="s2">, </span><span class="s1">Player.Direction.LEFT</span><span class="s2">, </span><span class="s6">0</span><span class="s2">, </span><span class="s6">0</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player result = instance.getPlayer(i)</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of addPlayer method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testAddPlayer_5args() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;addPlayer (user, colour, direction, x, y)&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">User user = </span><span class="s2">new </span><span class="s1">User(</span><span class="s6">1</span><span class="s2">, </span><span class="s5">&quot;Gabriel&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">String colour = </span><span class="s5">&quot;0x00F&quot;</span><span class="s2">;</span>
+        <span class="s1">Player.Direction direction = Player.Direction.UP</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">x = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">y = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">10</span><span class="s2">, </span><span class="s6">10</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.addPlayer(user</span><span class="s2">, </span><span class="s1">colour</span><span class="s2">, </span><span class="s1">direction</span><span class="s2">, </span><span class="s1">x</span><span class="s2">, </span><span class="s1">y)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of addPlayer method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testAddPlayer_4args() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;addPlayer (player, direction, x, y)&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player player = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s2">null, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player.Direction direction = Player.Direction.UP</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">x = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">y = </span><span class="s6">0</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">10</span><span class="s2">, </span><span class="s6">10</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.addPlayer(player</span><span class="s2">, </span><span class="s1">direction</span><span class="s2">, </span><span class="s1">x</span><span class="s2">, </span><span class="s1">y)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getBinaryData method, of class Map.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetBinaryData() {</span>
+        <span class="s1">System.out.println(</span><span class="s5">&quot;getBinaryData&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Map instance = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s6">0</span><span class="s2">, </span><span class="s6">0</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">byte</span><span class="s1">[] expResult = </span><span class="s2">new byte</span><span class="s1">[</span><span class="s6">0</span><span class="s1">]</span><span class="s2">;</span>
+        <span class="s2">byte</span><span class="s1">[] result = instance.getBinaryData()</span><span class="s2">;</span>
+        <span class="s1">assertArrayEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

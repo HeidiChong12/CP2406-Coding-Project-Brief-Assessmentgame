@@ -1,0 +1,311 @@
+<html>
+<head>
+<title>PlayerTest.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #629755; font-style: italic;}
+.s4 { color: #629755; font-weight: bold; font-style: italic;}
+.s5 { color: #6897bb;}
+.s6 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PlayerTest.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * To change this license header, choose License Headers in Project Properties. 
+ * To change this template file, choose Tools | Templates 
+ * and open the template in the editor. 
+ */</span>
+<span class="s2">package </span><span class="s1">gameplay</span><span class="s2">;</span>
+
+<span class="s2">import </span><span class="s1">database.User</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.After</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.AfterClass</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.Before</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.BeforeClass</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">org.junit.Test</span><span class="s2">;</span>
+<span class="s2">import static </span><span class="s1">org.junit.Assert.*</span><span class="s2">;</span>
+
+<span class="s3">/**</span>
+ <span class="s3">* Contains unit tests for Player class</span>
+ <span class="s3">*</span>
+ <span class="s3">* </span><span class="s4">@author </span><span class="s3">Gabriel</span>
+ <span class="s3">*/</span>
+<span class="s2">public class </span><span class="s1">PlayerTest {</span>
+
+    <span class="s2">public static </span><span class="s1">User testUser1</span><span class="s2">;</span>
+    <span class="s2">public static </span><span class="s1">User testUser2</span><span class="s2">;</span>
+
+    <span class="s0">//GameInfo testGame;</span>
+    <span class="s2">public </span><span class="s1">PlayerTest() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@BeforeClass</span>
+    <span class="s2">public static void </span><span class="s1">setUpClass() {</span>
+        <span class="s1">testUser1 = </span><span class="s2">new </span><span class="s1">User(</span><span class="s5">1</span><span class="s2">, </span><span class="s6">&quot;Gabriel&quot;</span><span class="s1">)</span><span class="s2">;</span>
+
+    <span class="s1">}</span>
+
+    <span class="s1">@AfterClass</span>
+    <span class="s2">public static void </span><span class="s1">tearDownClass() {</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Before</span>
+    <span class="s2">public void </span><span class="s1">setUp() {</span>
+
+    <span class="s1">}</span>
+
+    <span class="s1">@After</span>
+    <span class="s2">public void </span><span class="s1">tearDown() {</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getID method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetID() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;getID&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">expResult = </span><span class="s5">1</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">result = instance.getID()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getX method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetX() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;getX&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s5">0</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, null, null, null, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">expResult = </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">result = instance.getX()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getY method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetY() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;getY&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s5">0</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, null, null, null, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">expResult = </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">result = instance.getY()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getColour method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetColour() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;getColour&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s5">0</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, </span><span class="s6">&quot;0x00F&quot;</span><span class="s2">, null, null, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">String expResult = </span><span class="s6">&quot;0x00F&quot;</span><span class="s2">;</span>
+        <span class="s1">String result = instance.getColour()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getIsAlive method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetIsAlive() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;getIsAlive&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.setIsAlive(</span><span class="s2">true</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">boolean </span><span class="s1">expResult = </span><span class="s2">true;</span>
+        <span class="s2">boolean </span><span class="s1">result = instance.getIsAlive()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getUsername method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetUsername() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;getUsername&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">String expResult = </span><span class="s6">&quot;Gabriel&quot;</span><span class="s2">;</span>
+        <span class="s1">String result = instance.getUsername()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+        <span class="s1">expResult = </span><span class="s6">&quot;Gabe&quot;</span><span class="s2">;</span>
+        <span class="s1">assertNotEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of setX method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testSetX() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;setX&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">x = </span><span class="s5">10</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s2">null, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.setX(x)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of setY method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testSetY() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;setY&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">y = </span><span class="s5">25</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s2">null, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.setY(y)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of setIsAlive method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testSetIsAlive() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;setIsAlive&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">boolean </span><span class="s1">isAlive = </span><span class="s2">false;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s2">null, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.setIsAlive(isAlive)</span><span class="s2">;</span>
+        <span class="s1">isAlive = </span><span class="s2">true;</span>
+        <span class="s1">instance.setIsAlive(isAlive)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of init method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testInit() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;init&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">xStart = </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">yStart = </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s1">Player.Direction startingDirection = Player.Direction.UP</span><span class="s2">;</span>
+        <span class="s1">Map map = </span><span class="s2">null;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.init(xStart</span><span class="s2">, </span><span class="s1">yStart</span><span class="s2">, </span><span class="s1">startingDirection</span><span class="s2">, </span><span class="s1">map)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of moveUp method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testMoveUp() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;moveUp&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s5">10</span><span class="s2">, </span><span class="s5">10</span><span class="s2">, null, null, null, </span><span class="s1">Player.Direction.LEFT</span><span class="s2">, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.moveUp()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of moveDown method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testMoveDown() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;moveDown&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s5">10</span><span class="s2">, </span><span class="s5">10</span><span class="s2">, null, null, null, </span><span class="s1">Player.Direction.LEFT</span><span class="s2">, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.moveDown()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of moveRight method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testMoveRight() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;moveRight&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s5">10</span><span class="s2">, </span><span class="s5">10</span><span class="s2">, null, null, null, </span><span class="s1">Player.Direction.UP</span><span class="s2">, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.moveRight()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of moveLeft method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testMoveLeft() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;moveLeft&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s5">10</span><span class="s2">, </span><span class="s5">10</span><span class="s2">, null, null, null, </span><span class="s1">Player.Direction.UP</span><span class="s2">, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.moveLeft()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of moveCurrent method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testMoveCurrent() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;moveCurrent&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Map testMap = </span><span class="s2">new </span><span class="s1">Map(</span><span class="s5">0</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(</span><span class="s5">10</span><span class="s2">, </span><span class="s5">10</span><span class="s2">, </span><span class="s6">&quot;0x00F&quot;</span><span class="s2">, null, </span><span class="s1">testMap</span><span class="s2">, </span><span class="s1">Player.Direction.LEFT</span><span class="s2">, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.moveCurrent()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of winRound method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testWinRound() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;winRound&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.winRound()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getNumRoundsWon method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetNumRoundsWon() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;getNumRoundsWon&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">expResult = </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s2">int </span><span class="s1">result = instance.getNumRoundsWon()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of winGame method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testWinGame() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;winGame&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.winGame()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of loseGame method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testLoseGame() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;loseGame&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.loseGame()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of saveStats method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testSaveStats() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;saveStats&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">instance.saveStats()</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s3">/**</span>
+     <span class="s3">* Test of getUser method, of class Player.</span>
+     <span class="s3">*/</span>
+    <span class="s1">@Test</span>
+    <span class="s2">public void </span><span class="s1">testGetUser() {</span>
+        <span class="s1">System.out.println(</span><span class="s6">&quot;getUser&quot;</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">Player instance = </span><span class="s2">new </span><span class="s1">Player(testUser1</span><span class="s2">, null, null</span><span class="s1">)</span><span class="s2">;</span>
+        <span class="s1">User expResult = testUser1</span><span class="s2">;</span>
+        <span class="s1">User result = instance.getUser()</span><span class="s2">;</span>
+        <span class="s1">assertEquals(expResult</span><span class="s2">, </span><span class="s1">result)</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
